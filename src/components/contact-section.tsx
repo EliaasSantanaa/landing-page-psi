@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Instagram } from "lucide-react";
 
 export function ContactSection() {
   return (
@@ -23,7 +23,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 mb-12">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 mb-12">
           <Card className="p-10 border-2 border-border/50 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:-translate-y-1 bg-gradient-to-br from-card to-secondary/20">
             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center mb-6 shadow-lg">
               <MessageCircle className="w-8 h-8 text-primary" />
@@ -70,6 +70,31 @@ export function ContactSection() {
               size="lg"
             >
               egrazielec@gmail.com
+            </Button>
+          </Card>
+
+          <Card className="p-10 border-2 border-border/50 hover:shadow-2xl hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:-translate-y-1 bg-gradient-to-br from-card to-secondary/20">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-500/10 flex items-center justify-center mb-6 shadow-lg">
+              <Instagram className="w-8 h-8 text-pink-600" />
+            </div>
+            <h3
+              className="text-2xl font-bold mb-3"
+              style={{ fontFamily: "var(--font-crimson)" }}
+            >
+              Instagram
+            </h3>
+            <p className="text-muted-foreground mb-6 text-base leading-relaxed">
+              Acompanhe conteúdos sobre saúde mental
+            </p>
+            <Button
+              onClick={() =>
+                window.open("https://instagram.com/psi.elayneg", "_blank")
+              }
+              variant="outline"
+              className="w-full text-base font-medium"
+              size="lg"
+            >
+              @psi.elayneg
             </Button>
           </Card>
         </div>
