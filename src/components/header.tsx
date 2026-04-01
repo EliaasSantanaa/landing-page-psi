@@ -28,37 +28,35 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/98 backdrop-blur-lg shadow-md border-b border-border/50"
+          ? "bg-background/88 backdrop-blur-xl border-b border-border/60"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-xl md:text-2xl font-serif font-semibold text-foreground hover:text-primary transition-all duration-300 hover:scale-105"
-            style={{ fontFamily: "var(--font-crimson)" }}
+            className="text-2xl md:text-3xl font-semibold tracking-wide text-foreground hover:text-primary transition-colors duration-300"
           >
             Elayne Graziele
           </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-7 lg:gap-9">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-sm font-semibold text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-sm font-semibold text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-sm font-semibold text-muted-foreground hover:text-primary transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               Contato
             </button>
@@ -66,41 +64,39 @@ export function Header() {
               onClick={() =>
                 window.open("https://wa.me/5511960247780", "_blank")
               }
-              className="font-semibold"
+              className="font-semibold px-6"
             >
               Agendar Consulta
             </Button>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground rounded-full border border-border/70 bg-card/80"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-6 border-t border-border animate-fade-in-down bg-background/95 backdrop-blur-md rounded-b-xl">
-            <div className="flex flex-col gap-5">
+          <nav className="md:hidden py-6 px-4 mb-4 border border-border/70 animate-fade-in-down bg-background/95 backdrop-blur-md rounded-2xl">
+            <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-base font-semibold text-muted-foreground hover:text-primary transition-all duration-300 text-left py-2 px-2 hover:bg-secondary/50 rounded-lg"
+                className="text-sm uppercase tracking-[0.12em] text-muted-foreground hover:text-foreground transition-colors duration-300 text-left py-2"
               >
                 Sobre
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-base font-semibold text-muted-foreground hover:text-primary transition-all duration-300 text-left py-2 px-2 hover:bg-secondary/50 rounded-lg"
+                className="text-sm uppercase tracking-[0.12em] text-muted-foreground hover:text-foreground transition-colors duration-300 text-left py-2"
               >
                 Serviços
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-base font-semibold text-muted-foreground hover:text-primary transition-all duration-300 text-left py-2 px-2 hover:bg-secondary/50 rounded-lg"
+                className="text-sm uppercase tracking-[0.12em] text-muted-foreground hover:text-foreground transition-colors duration-300 text-left py-2"
               >
                 Contato
               </button>

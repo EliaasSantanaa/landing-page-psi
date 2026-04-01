@@ -4,32 +4,31 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Paleta bege ultra claro clean e minimalista */
-  --background: oklch(0.99 0.004 85); /* Bege ultra claro, quase branco puro */
-  --foreground: oklch(0.32 0.012 60); /* Marrom muito suave */
-  --card: oklch(1.00 0.002 80); /* Branco levemente bege */
-  --card-foreground: oklch(0.32 0.012 60);
-  --popover: oklch(1.00 0.002 80);
-  --popover-foreground: oklch(0.32 0.012 60);
-  --primary: oklch(0.55 0.10 40); /* Terracota suave e clean */
-  --primary-foreground: oklch(0.99 0.002 80);
-  --secondary: oklch(0.96 0.008 78); /* Bege ultra claro minimalista */
-  --secondary-foreground: oklch(0.32 0.012 60);
-  --muted: oklch(0.97 0.006 80); /* Bege ultra claro */
-  --muted-foreground: oklch(0.54 0.012 60);
-  --accent: oklch(0.62 0.09 48); /* Salmão clean e suave */
-  --accent-foreground: oklch(0.99 0.002 80);
+  --background: oklch(0.985 0.008 84);
+  --foreground: oklch(0.29 0.018 58);
+  --card: oklch(0.995 0.005 82);
+  --card-foreground: oklch(0.29 0.018 58);
+  --popover: oklch(0.995 0.005 82);
+  --popover-foreground: oklch(0.29 0.018 58);
+  --primary: oklch(0.52 0.083 44);
+  --primary-foreground: oklch(0.985 0.008 84);
+  --secondary: oklch(0.955 0.01 84);
+  --secondary-foreground: oklch(0.29 0.018 58);
+  --muted: oklch(0.965 0.008 84);
+  --muted-foreground: oklch(0.47 0.022 58);
+  --accent: oklch(0.62 0.058 150);
+  --accent-foreground: oklch(0.985 0.008 84);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0.003 90);
-  --border: oklch(0.93 0.008 78); /* Bordas bege ultra claro */
+  --border: oklch(0.91 0.01 80);
   --input: oklch(0.98 0.006 80);
-  --ring: oklch(0.55 0.10 40);
-  --chart-1: oklch(0.55 0.10 40);
-  --chart-2: oklch(0.62 0.09 48);
-  --chart-3: oklch(0.70 0.08 55);
-  --chart-4: oklch(0.48 0.10 42);
-  --chart-5: oklch(0.60 0.10 50);
-  --radius: 0.75rem;
+  --ring: oklch(0.52 0.083 44);
+  --chart-1: oklch(0.52 0.083 44);
+  --chart-2: oklch(0.62 0.058 150);
+  --chart-3: oklch(0.66 0.07 88);
+  --chart-4: oklch(0.47 0.065 48);
+  --chart-5: oklch(0.56 0.05 142);
+  --radius: 1rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -76,8 +75,8 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-cormorant);
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -121,8 +120,35 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(
+        circle at 12% 14%,
+        color-mix(in oklch, var(--primary) 10%, transparent) 0%,
+        transparent 42%
+      ),
+      radial-gradient(
+        circle at 90% 84%,
+        color-mix(in oklch, var(--accent) 9%, transparent) 0%,
+        transparent 40%
+      );
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-cormorant);
+    letter-spacing: 0.01em;
+  }
+
+  section {
+    scroll-margin-top: 6rem;
   }
 }
 
@@ -150,12 +176,20 @@
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
+  animation: fade-in-up 0.7s ease-out forwards;
   opacity: 0;
 }
 
 .animate-fade-in-down {
-  animation: fade-in-down 0.3s ease-out forwards;
+  animation: fade-in-down 0.35s ease-out forwards;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl lg:text-6xl leading-tight text-balance;
+}
+
+.section-subtitle {
+  @apply text-base md:text-lg text-muted-foreground leading-relaxed text-pretty;
 }
 
 /* Melhorias de performance */

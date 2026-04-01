@@ -1,14 +1,14 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Crimson_Text } from "next/font/google";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const crimsonText = Crimson_Text({
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-crimson",
+  weight: ["500", "600", "700"],
+  variable: "--font-cormorant",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${inter.variable} ${crimsonText.variable} font-sans antialiased`}
+        className={`${manrope.variable} ${cormorant.variable} font-sans antialiased`}
       >
         {children}
         <Analytics />
