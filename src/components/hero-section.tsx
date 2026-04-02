@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -73,38 +74,35 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div
+          <figure
             className="animate-fade-in-up"
             style={{ animationDelay: "0.28s" }}
           >
-            <div className="rounded-3xl border border-border/70 bg-card/85 backdrop-blur-sm p-7 md:p-8">
-              <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground mb-4">
-                Atendimento com foco em
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Ansiedade e sobrecarga emocional",
-                  "Relacionamentos e limites saudaveis",
-                  "Autoconhecimento e autoestima",
-                  "Transicoes e decisoes de vida",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
-                    <span className="text-foreground/90 leading-relaxed">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-7 pt-6 border-t border-border/70">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Sessao online, individual e com sigilo profissional. Um espaco
-                  seguro para voce falar sem pressa.
-                </p>
+            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-border/70 bg-card/90 p-3 shadow-[0_22px_55px_-35px_rgba(74,51,36,0.55)]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/45">
+                <Image
+                  src="/foto.jpeg"
+                  alt="Retrato profissional da psicologa Elayne Graziele"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 90vw, 420px"
+                  className="object-cover"
+                />
               </div>
+
+              <figcaption className="px-2 pt-5 pb-2 text-center">
+                <p className="font-serif text-3xl leading-tight text-foreground">
+                  Elayne Graziele
+                </p>
+                <p className="mt-1 text-sm uppercase tracking-[0.14em] text-muted-foreground">
+                  Psicologa | Terapia Cognitivo-Comportamental
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Atendimento online, individual e com sigilo profissional.
+                </p>
+              </figcaption>
             </div>
-          </div>
+          </figure>
         </div>
       </div>
     </section>
