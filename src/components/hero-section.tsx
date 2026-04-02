@@ -31,7 +31,7 @@ export function HeroSection() {
               className="text-5xl md:text-6xl lg:text-7xl font-semibold text-foreground leading-[1.02] text-balance animate-fade-in-up"
               style={{ animationDelay: "0.08s" }}
             >
-              Cuidar da mente tambem e um ato de coragem.
+              Cuidar da mente também é um ato de coragem.
             </h1>
 
             <p
@@ -39,7 +39,7 @@ export function HeroSection() {
               style={{ animationDelay: "0.16s" }}
             >
               Psicoterapia com base na TCC para quem busca clareza emocional,
-              reorganizacao interna e mudancas sustentaveis no dia a dia.
+              reorganização interna e mudanças sustentáveis no dia a dia.
             </p>
 
             <div
@@ -82,7 +82,7 @@ export function HeroSection() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/45">
                 <Image
                   src="/foto.jpeg"
-                  alt="Retrato profissional da psicologa Elayne Graziele"
+                  alt="Retrato profissional da psicóloga Elayne Graziele"
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 420px"
@@ -95,7 +95,7 @@ export function HeroSection() {
                   Elayne Graziele
                 </p>
                 <p className="mt-1 text-sm uppercase tracking-[0.14em] text-muted-foreground">
-                  Psicologa | Terapia Cognitivo-Comportamental
+                  Psicóloga | Terapia Cognitivo-Comportamental
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                   Atendimento online, individual e com sigilo profissional.

@@ -45,7 +45,7 @@ export function Footer() {
                   }
                   className="hover:text-primary transition-colors duration-300 inline-block"
                 >
-                  Servicos
+                  Serviços
                 </button>
               </li>
               <li>

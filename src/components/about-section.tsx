@@ -23,7 +23,7 @@ export function AboutSection() {
               <GraduationCap className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-3xl font-semibold mb-3 text-center">
-              Formacao
+              Formação
             </h3>
             <p className="text-muted-foreground leading-relaxed text-center">
               Especialização em TCC e pós-graduação em Psicopatologia, baseando
@@ -46,7 +46,7 @@ export function AboutSection() {
             <div className="w-14 h-14 rounded-2xl bg-primary/12 flex items-center justify-center mb-5 mx-auto">
               <Sparkles className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-3xl font-semibold mb-3 text-center">Mudanca</h3>
+            <h3 className="text-3xl font-semibold mb-3 text-center">Mudança</h3>
             <p className="text-muted-foreground leading-relaxed text-center">
               Acredito na terapia como um processo ativo que fortalece a
               autonomia, amplia a consciência e promove qualidade de vida.

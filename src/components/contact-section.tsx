@@ -10,9 +10,9 @@ export function ContactSection() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="text-xs uppercase tracking-[0.16em] text-primary mb-4">
-            Proximo passo
+            Próximo passo
           </p>
-          <h2 className="section-title text-foreground mb-5">Vamos comecar?</h2>
+          <h2 className="section-title text-foreground mb-5">Vamos começar?</h2>
           <p className="section-subtitle">
             Entre em contato para agendar sua primeira consulta ou tirar dúvidas
           </p>
