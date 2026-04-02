@@ -8,7 +8,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-44 lg:pb-32 overflow-hidden"
+      className="section-shell relative pt-32 pb-20 md:pt-40 md:pb-28 lg:pt-44 lg:pb-32 overflow-hidden"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-16 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
@@ -78,7 +78,7 @@ export function HeroSection() {
             className="animate-fade-in-up"
             style={{ animationDelay: "0.28s" }}
           >
-            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-border/70 bg-card/90 p-3 shadow-[0_22px_55px_-35px_rgba(74,51,36,0.55)]">
+            <div className="interactive-card relative mx-auto w-full max-w-md overflow-hidden rounded-3xl border border-border/70 bg-card/90 p-3 shadow-[0_22px_55px_-35px_rgba(74,51,36,0.55)]">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted/45">
                 <Image
                   src="/foto.jpeg"
@@ -86,7 +86,7 @@ export function HeroSection() {
                   fill
                   priority
                   sizes="(max-width: 1024px) 90vw, 420px"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
                 />
               </div>
 

@@ -6,7 +6,7 @@ import { Mail, MessageCircle, MapPin, Instagram } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 md:py-28">
+    <section id="contact" className="section-shell py-20 md:py-28" data-reveal>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="text-xs uppercase tracking-[0.16em] text-primary mb-4">
@@ -19,7 +19,7 @@ export function ContactSection() {
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-5 mb-10">
-          <Card className="p-8 border border-border/65 bg-card/85">
+          <Card className="interactive-card p-8 border border-border/65 bg-card/85">
             <div className="w-14 h-14 rounded-2xl bg-primary/12 flex items-center justify-center mb-5">
               <MessageCircle className="w-8 h-8 text-primary" />
             </div>
@@ -38,7 +38,7 @@ export function ContactSection() {
             </Button>
           </Card>
 
-          <Card className="p-8 border border-border/65 bg-card/85">
+          <Card className="interactive-card p-8 border border-border/65 bg-card/85">
             <div className="w-14 h-14 rounded-2xl bg-accent/14 flex items-center justify-center mb-5">
               <Mail className="w-8 h-8 text-accent" />
             </div>
@@ -58,7 +58,7 @@ export function ContactSection() {
             </Button>
           </Card>
 
-          <Card className="p-8 border border-border/65 bg-card/85">
+          <Card className="interactive-card p-8 border border-border/65 bg-card/85">
             <div className="w-14 h-14 rounded-2xl bg-primary/12 flex items-center justify-center mb-5">
               <Instagram className="w-8 h-8 text-pink-600" />
             </div>
@@ -79,7 +79,7 @@ export function ContactSection() {
           </Card>
         </div>
 
-        <Card className="max-w-5xl mx-auto p-8 md:p-10 bg-card/85 border border-border/65">
+        <Card className="interactive-card max-w-5xl mx-auto p-8 md:p-10 bg-card/85 border border-border/65">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center flex-shrink-0">
               <MapPin className="w-10 h-10 text-primary" />

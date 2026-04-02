@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,41 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>("section[id]"),
+    );
+
+    if (!sections.length) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.45,
+        rootMargin: "-20% 0px -40% 0px",
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const navItemClass = (id: string) =>
+    `text-sm uppercase tracking-[0.14em] transition-all duration-300 ${
+      activeSection === id
+        ? "text-foreground"
+        : "text-muted-foreground hover:text-foreground"
+    }`;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -44,19 +80,22 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-7 lg:gap-9">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className={navItemClass("about")}
+              aria-current={activeSection === "about" ? "page" : undefined}
             >
               Sobre
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className={navItemClass("services")}
+              aria-current={activeSection === "services" ? "page" : undefined}
             >
               Serviços
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-sm uppercase tracking-[0.14em] text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className={navItemClass("contact")}
+              aria-current={activeSection === "contact" ? "page" : undefined}
             >
               Contato
             </button>

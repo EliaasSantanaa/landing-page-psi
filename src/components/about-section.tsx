@@ -3,7 +3,7 @@ import { GraduationCap, Heart, Sparkles } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 md:py-28">
+    <section id="about" className="section-shell py-20 md:py-28" data-reveal>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-14">
           <p className="text-xs uppercase tracking-[0.16em] text-primary mb-4">
@@ -18,7 +18,7 @@ export function AboutSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6 mb-12 max-w-6xl mx-auto">
-          <Card className="p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
+          <Card className="interactive-card p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
             <div className="w-14 h-14 rounded-2xl bg-primary/12 flex items-center justify-center mb-5 mx-auto">
               <GraduationCap className="w-8 h-8 text-primary" />
             </div>
@@ -31,7 +31,7 @@ export function AboutSection() {
             </p>
           </Card>
 
-          <Card className="p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
+          <Card className="interactive-card p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
             <div className="w-14 h-14 rounded-2xl bg-accent/14 flex items-center justify-center mb-5 mx-auto">
               <Heart className="w-8 h-8 text-accent" />
             </div>
@@ -42,7 +42,7 @@ export function AboutSection() {
             </p>
           </Card>
 
-          <Card className="p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
+          <Card className="interactive-card p-7 border border-border/65 bg-card/85 backdrop-blur-sm">
             <div className="w-14 h-14 rounded-2xl bg-primary/12 flex items-center justify-center mb-5 mx-auto">
               <Sparkles className="w-8 h-8 text-primary" />
             </div>
@@ -54,7 +54,7 @@ export function AboutSection() {
           </Card>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-card/85 border border-border/65 rounded-3xl p-8 md:p-12">
+        <div className="interactive-card max-w-4xl mx-auto bg-card/85 border border-border/65 rounded-3xl p-8 md:p-12">
           <div className="space-y-5 text-center">
             <div className="inline-block">
               <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mx-auto mb-3">

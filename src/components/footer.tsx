@@ -2,7 +2,10 @@
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/65 bg-secondary/45">
+    <footer
+      className="section-shell border-t border-border/65 bg-secondary/45"
+      data-reveal
+    >
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-10 mb-8">
           <div>

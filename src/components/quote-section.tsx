@@ -1,8 +1,11 @@
 export function QuoteSection() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden">
+    <section
+      className="section-shell py-20 md:py-28 relative overflow-hidden"
+      data-reveal
+    >
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-5xl mx-auto text-center rounded-3xl border border-border/65 bg-card/80 px-6 py-12 md:px-10 md:py-16">
+        <div className="interactive-card max-w-5xl mx-auto text-center rounded-3xl border border-border/65 bg-card/80 px-6 py-12 md:px-10 md:py-16">
           <div className="mb-8">
             <svg
               className="w-20 h-20 mx-auto text-primary/25"
