@@ -23,7 +23,7 @@ export function HeroSection() {
           <div className="space-y-8 text-center lg:text-left">
             <div className="inline-block animate-fade-in-up">
               <span className="text-xs md:text-sm font-semibold uppercase tracking-[0.16em] text-primary bg-card/90 px-4 py-2 rounded-full border border-border/70">
-                Atendimento online para adultos
+                Atendimento online
               </span>
             </div>
 
@@ -49,7 +49,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 onClick={() =>
-                  window.open("https://wa.me/5511960247780", "_blank")
+                  window.open("https://wa.me/5511960247780?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20atendimento", "_blank")
                 }
                 className="text-base font-semibold group"
               >
