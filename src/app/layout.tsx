@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Manrope, Cormorant_Garamond } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -43,6 +44,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <GoogleAnalytics gaId="G-VGRCW9XN46" />
       </body>
     </html>
   );
