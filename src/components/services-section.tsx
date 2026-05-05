@@ -72,7 +72,7 @@ export function ServicesSection() {
         <div className="max-w-4xl mx-auto">
           <Card className="interactive-card p-8 md:p-12 border border-border/65 bg-card/85">
             <h3 className="text-4xl md:text-5xl font-semibold text-foreground mb-7 text-balance text-center">
-              Para quem a terapia pode ajudar
+              Alguns dos temas mais comuns trabalhados na terapia
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
